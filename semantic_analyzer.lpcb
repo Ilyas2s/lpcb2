@@ -1,0 +1,3 @@
+fonction analyser_semantique(parsed) {
+    retourner parsed.some(token => token.valeur == "Bonjour");
+}

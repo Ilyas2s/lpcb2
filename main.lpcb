@@ -1,0 +1,28 @@
+importer "algorithme/tokenizer.lpcb"
+importer "algorithme/parser.lpcb"
+importer "algorithme/syntax_analyzer.lpcb"
+importer "algorithme/semantic_analyzer.lpcb"
+importer "conversation_en_module/intent_recognition.lpcb"
+importer "conversation_en_module/response_generation.lpcb"
+
+fonction demarrer_chatbot() {
+    afficher("Chatbot démarré...");
+    texte = lire_entree_utilisateur();
+    tokens = tokenizer(texte);
+    parsed = parser(tokens);
+    syntax_ok = analyser_syntaxe(parsed);
+    semantic_ok = analyser_semantique(parsed);
+    si (syntax_ok et semantic_ok) {
+        intention = reconnaitre_intention(texte);
+        reponse = generer_reponse(intention);
+        afficher(reponse);
+    } sinon {
+        afficher("Erreur de syntaxe ou de sémantique.");
+    }
+}
+
+fonction lire_entree_utilisateur() {
+    retourner "Bonjour, comment ça va?";
+}
+
+demarrer_chatbot();

@@ -1,0 +1,3 @@
+fonction analyser_syntaxe(parsed) {
+    retourner parsed.every(token => token.type == "mot");
+}
