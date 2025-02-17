@@ -1,0 +1,4 @@
+configuration {
+    langue: "fr",
+    fuseau_horaire: "Europe/Paris"
+}
