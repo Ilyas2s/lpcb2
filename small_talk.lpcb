@@ -1,0 +1,3 @@
+fonction ca_va() {
+    retourner "Ça va bien, merci! Et vous?";
+}

@@ -1,0 +1,11 @@
+fonction reconnaitre_intention(texte) {
+    si (texte.contains("bonjour")) {
+        retourner "salutation";
+    } sinon si (texte.contains("ça va")) {
+        retourner "small_talk";
+    } sinon si (texte.contains("faire")) {
+        retourner "capabilities";
+    } sinon {
+        retourner "inconnu";
+    }
+}

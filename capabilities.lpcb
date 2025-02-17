@@ -1,0 +1,3 @@
+fonction capabilities() {
+    retourner "Je peux vous aider avec diverses tâches, comme répondre à des questions ou tenir une conversation.";
+}

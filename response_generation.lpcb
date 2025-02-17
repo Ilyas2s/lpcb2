@@ -1,0 +1,15 @@
+importer "conversation_en_module/greetings.lpcb"
+importer "conversation_en_module/small_talk.lpcb"
+importer "conversation_en_module/capabilities.lpcb"
+
+fonction generer_reponse(intention) {
+    si (intention == "salutation") {
+        retourner saluer();
+    } sinon si (intention == "small_talk") {
+        retourner ca_va();
+    } sinon si (intention == "capabilities") {
+        retourner capabilities();
+    } sinon {
+        retourner "Je ne comprends pas.";
+    }
+}
